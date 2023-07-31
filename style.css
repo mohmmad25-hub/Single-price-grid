@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    background-color: #eee;
+}
+
+.design {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 800px;
+    margin: 30px auto;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 10px;
+}
+
+.top {
+    grid-column: span 2;
+    padding: 20px;
+    background-color: white;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.join {
+    font-weight: 700;
+    color: var(--Cyan);
+    margin-bottom: 20px;
+}
+
+.free {
+    color: var(--Bright-Yellow);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.paragraph-1 {
+    width: 70%;
+    color: var(--Grayish-Blue);
+}
+
+.bottom-left {
+    background-color: var(--Cyan);
+    padding: 25px;
+    border-radius: 0 0 0 1rem;
+}
+
+.monthly {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.supscription {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+span {
+    color: var(--Light-Gray);
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.pay-desc {
+    color: var(--Light-Gray);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-left: 50px;
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bottom-right {
+    background-color: hsl(179, 62%, 43%, 0.7);
+    padding: 25px 35px;
+    border-radius: 0 0 1rem 0;
+}
+
+.why {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.description {
+    color: var(--Light-Gray);
+    width: 65%;
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        padding: 0.6rem;
+    }
+    .design {
+        grid-template-columns: 325px;
+        grid-template-rows: repeat(3, 1fr);
+        width: 325px;
+    }
+    .top {
+        grid-column: span 1;
+        grid-row: 1;
+    }
+    .bottom-left {
+        grid-row: 2 span 1;
+        border-radius: 0;
+    }
+    button {
+        position: absolute;
+        top: 450px;
+        right: 50px;
+    }
+    .bottom-right {
+        grid-row: 3 span 1;
+        border-radius: 0 0 1rem 1rem;
+    }
+}
